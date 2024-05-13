@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        User user = new User("Shan Chun", "MAD Developer", 1, false);
+        User user = new User("MAD", "MAD Developer", 1, false);
         TextView tvName = findViewById(R.id.tvName);
         TextView tvDescription = findViewById(R.id.tvDescription);
         Button btnFollow = findViewById(R.id.btnFollow);
@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         tvName.setText(user.name);
         tvDescription.setText(user.description);
 
+        String newName = getIntent().getStringExtra("MAD");
+
+        tvName.setText("MAD " + newName);
 
          btnFollow.setOnClickListener(new View.OnClickListener() {
              @Override

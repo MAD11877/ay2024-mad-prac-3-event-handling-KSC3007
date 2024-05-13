@@ -8,8 +8,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
+
+import java.util.Random;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -25,6 +28,7 @@ public class ListActivity extends AppCompatActivity {
         });
 
         ImageView ivBackground = findViewById(R.id.ivBackground);
+        final Random random = new Random();
 
         ivBackground.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +50,10 @@ public class ListActivity extends AppCompatActivity {
                 });
 
                 builder.setNegativeButton("View", (DialogInterface.OnClickListener) (dialog, which) -> {
-
+                    Intent intent = new Intent(ListActivity.this, MainActivity.class);
+                    String randomNumber = String.valueOf(random.nextInt(999999));
+                    intent.putExtra("MAD", randomNumber);
+                    startActivity(intent);
                 });
 
                 AlertDialog alertDialog = builder.create();
