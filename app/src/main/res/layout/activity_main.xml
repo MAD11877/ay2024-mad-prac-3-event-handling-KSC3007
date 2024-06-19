@@ -54,7 +54,7 @@
         android:paddingTop="10dp"
         android:paddingRight="50dp"
         android:paddingBottom="10dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        android:text="Sample text"
         android:textAlignment="center"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
